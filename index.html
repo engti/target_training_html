@@ -8,8 +8,9 @@
   <title>Target Training Page</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+
   <!--Adobe Target Prehiding Snipper-->
-  <script>
+  <!-- <script>
     //prehiding snippet for Adobe Target with asynchronous tags deployment
     ;(function(win, doc, style, timeout) {
     var STYLE_ID = 'at-body-style';
@@ -39,8 +40,15 @@
     setTimeout(function() {
        removeStyle(getParent(), STYLE_ID);
     }, timeout);
-    }(window, document, "body {opacity: 0 !important}", 3000));
- </script> 
+    }(window, document, "body {opacity: 0 !important}", 100));
+  </script> -->
+   <!--Cookie domains for Target-->
+   <script>
+        window.targetGlobalSettings = {  
+            cookieDomain: "engti.github.com"// set cookies on the subdomain
+        };
+   </script>
+
   <!--Launch Embed Code-->
   <script src="https://assets.adobedtm.com/35066b6d6803/11265f8b995d/launch-a128c2e5d1f8-development.min.js" async></script>
 </head>
@@ -51,6 +59,7 @@
   <script>
     window.adobeDataLayer = window.adobeDataLayer || [];
     window.adobeDataLayer.push({ 
+        "event":"page_view",
         "content": {
             "title": "Home Page"
         },
