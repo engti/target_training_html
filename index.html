@@ -8,6 +8,40 @@
   <title>Target Training Page</title>
   <link rel="stylesheet" href="styles.css">
   <script src="app.js" defer></script>
+  <!--Adobe Target Prehiding Snipper-->
+  <script>
+    //prehiding snippet for Adobe Target with asynchronous tags deployment
+    ;(function(win, doc, style, timeout) {
+    var STYLE_ID = 'at-body-style';
+    function getParent() {
+       return doc.getElementsByTagName('head')[0];
+    }
+    function addStyle(parent, id, def) {
+       if (!parent) {
+       return;
+       }
+       var style = doc.createElement('style');
+       style.id = id;
+       style.innerHTML = def;
+       parent.appendChild(style);
+    }
+    function removeStyle(parent, id) {
+       if (!parent) {
+       return;
+       }
+       var style = doc.getElementById(id);
+       if (!style) {
+       return;
+       }
+       parent.removeChild(style);
+    }
+    addStyle(getParent(), STYLE_ID, style);
+    setTimeout(function() {
+       removeStyle(getParent(), STYLE_ID);
+    }, timeout);
+    }(window, document, "body {opacity: 0 !important}", 3000));
+ </script> 
+  <!--Launch Embed Code-->
   <script src="https://assets.adobedtm.com/35066b6d6803/11265f8b995d/launch-a128c2e5d1f8-development.min.js" async></script>
 </head>
 
