@@ -80,19 +80,38 @@
         });
     </script>
 <!--Page Content Rendering-->
-  <div class="card">
-    <h2>Camera</h2>
-    <div class="actions">
-    <i class="fa-solid fa-camera-retro fa-10x"></i>
-      <button class="btn">Add to Cart</button>
+<!--Camera-->
+    <div class="card">
+        <h2>Camera</h2>
+        <div class="actions">
+        <i class="fa-solid fa-camera-retro fa-10x"></i>
+        <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'camera','unit':1,'price':100}})">Add to Cart</button>
+        </div>
     </div>
-  </div>
-  <div class="card">
-    <h2>Thank Me</h2>
-    <div class="actions">
-      <button class="btn">Thank</button>
+    <!--Motorcycle-->
+    <div class="card">
+        <h2>Motorcycle</h2>
+        <div class="actions">
+        <i class="fa-solid fa-motorcyle fa-10x"></i>
+        <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'motorcycle','unit':1,'price':1500}})">Add to Cart</button>
+        </div>
     </div>
-  </div>
+    <!--Hammer-->
+    <div class="card">
+        <h2>Hammer</h2>
+        <div class="actions">
+        <i class="fa-solid fa-hammer fa-10x"></i>
+          <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'hammer','unit':1,'price':18}})">Add to Cart</button>
+        </div>
+      </div>
+    <!--Calculator-->
+    <div class="card">
+        <h2>Calculator</h2>
+        <div class="actions">
+        <i class="fa-solid fa-calculator fa-10x"></i>
+        <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'calculator','unit':1,'price':33.5}})">Add to Cart</button>
+        </div>
+    </div>
 </body>
 
 </html>
