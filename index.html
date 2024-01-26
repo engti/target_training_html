@@ -7,42 +7,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Target Training Page</title>
   <link rel="stylesheet" href="styles.css">
-  <script src="app.js" defer></script>
-
-  <!--Adobe Target Prehiding Snipper-->
-  <!-- <script>
-    //prehiding snippet for Adobe Target with asynchronous tags deployment
-    ;(function(win, doc, style, timeout) {
-    var STYLE_ID = 'at-body-style';
-    function getParent() {
-       return doc.getElementsByTagName('head')[0];
-    }
-    function addStyle(parent, id, def) {
-       if (!parent) {
-       return;
-       }
-       var style = doc.createElement('style');
-       style.id = id;
-       style.innerHTML = def;
-       parent.appendChild(style);
-    }
-    function removeStyle(parent, id) {
-       if (!parent) {
-       return;
-       }
-       var style = doc.getElementById(id);
-       if (!style) {
-       return;
-       }
-       parent.removeChild(style);
-    }
-    addStyle(getParent(), STYLE_ID, style);
-    setTimeout(function() {
-       removeStyle(getParent(), STYLE_ID);
-    }, timeout);
-    }(window, document, "body {opacity: 0 !important}", 100));
-  </script> -->
-
+  <!-- <script src="js/app.js" defer></script> -->
+  <!-- <script src="js/target_addons.js" defer></script> -->
+  <script src="js/analytics.js" defer></script>
    <!--Cookie domains for Target-->
    <script>
         window.targetGlobalSettings = {  
@@ -85,17 +52,18 @@
             <!--Camera-->
             <div class="card">
                 <h2>Camera</h2>
-                <div class="actions">
                 <i class="fa-solid fa-camera-retro fa-10x"></i>
-                <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'camera','unit':1,'price':100}})">Add to Cart</button>
+                <div class="actions">
+                
+                <button class="btn" onclick="writeAnalyticsData('addToCart','camera',1,100)">Add to Cart</button>
                 </div>
             </div>
             <!--TV-->
             <div class="card">
                 <h2>TV</h2>
-                <div class="actions">
                 <i class="fa-solid fa-tv fa-10x"></i>
-                <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'tv','unit':1,'price':400}})">Add to Cart</button>
+                <div class="actions">  
+                <button class="btn" onclick="writeAnalyticsData('addToCart','tv',1,400)">Add to Cart</button>
                 </div>
             </div>
         </div>
@@ -105,7 +73,7 @@
                 <h2>Truck</h2>
                 <div class="actions">
                 <i class="fa-solid fa-truck-monster fa-10x"></i>
-                <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'truck','unit':1,'price':8200}})">Add to Cart</button>
+                <button class="btn" onclick="writeAnalyticsData('addToCart','truck',1,4100)">Add to Cart</button>
                 </div>
             </div>
             <!--Calculator-->
@@ -113,7 +81,7 @@
                 <h2>Calculator</h2>
                 <div class="actions">
                 <i class="fa-solid fa-calculator fa-10x"></i>
-                <button class="btn" onclick="adobeDataLayer.push({'event':'addToCart','product':{'name':'calculator','unit':1,'price':33.5}})">Add to Cart</button>
+                <button class="btn" onclick="writeAnalyticsData('addToCart','calculator',1,33.5)">Add to Cart</button>
                 </div>
             </div>
         </div>

@@ -6,9 +6,9 @@ let backdrop;
 button.addEventListener('click', showModalHandler);
 
 function showModalHandler() {
-  if (modal) {
+  /* if (modal) {
     return;
-  }
+  } */
 
   modal = document.createElement('div');
   modal.className = 'modal';
